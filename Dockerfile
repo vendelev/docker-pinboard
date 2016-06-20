@@ -19,7 +19,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin \
  && mv /usr/bin/composer.phar /usr/bin/composer
 
 RUN cd /server && \
- composer install --no-interaction \
+ composer install --no-interaction && \
  composer update kurl/silex-doctrine-migrations-provider doctrine/migrations
 
 CMD cd /server && \

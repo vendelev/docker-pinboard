@@ -21,5 +21,5 @@ docker run -d \
 -v $(pwd)/parameters.yml:/server/config/parameters.yml \
 -v $(pwd)/php.ini:/etc/php5/fpm/conf.d/99-custom.ini:ro \
 -v $(pwd)/fpm-pool.conf:/etc/php5/fpm/pool.d/www.conf:ro \
-lebnik/pinboard
+lebnik/pinboard:latest
 ```
