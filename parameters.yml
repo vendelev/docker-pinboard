@@ -1,5 +1,5 @@
 db:
-    host: e2.int.datravel.com
+    host: localhost
     name: pinba
     user: root
     pass: root
