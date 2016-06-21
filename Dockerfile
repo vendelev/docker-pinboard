@@ -9,7 +9,7 @@ ADD . /tmp/files
 WORKDIR /server
 
 RUN apt-get update \
- && apt-get install -y git \
+ && apt-get install -y cron git \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -22,7 +22,6 @@ RUN cd /server && \
  composer install --no-interaction && \
  composer update kurl/silex-doctrine-migrations-provider doctrine/migrations
 
-CMD cd /server && \
- ./console migrations:migrate --no-interaction && \
- ./console register-crontab && \
+CMD ./console migrations:migrate --no-interaction && \
+ ./console register-crontab --no-interaction && \
  exec /usr/sbin/php5-fpm -F
