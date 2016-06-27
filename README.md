@@ -13,10 +13,6 @@ Correct settings in the sample files:
 - fpm-pool.conf
 - php.ini
 
-Clone static files:
-```
-mkdir /var/www/pinboard && git clone git://github.com/intaro/pinboard.git --branch=v1.5.2 /var/www/pinboard
-```
 Now you can to run docker container:
 ```
 docker run -d \
