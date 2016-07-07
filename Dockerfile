@@ -6,7 +6,6 @@ RUN mkdir /tmp/files && \
  mkdir -p /var/www/pinboard
 
 ADD . /tmp/files
-WORKDIR /var/www/pinboard
 
 RUN apt-get update \
  && apt-get install -y cron git \
@@ -30,3 +29,5 @@ RUN apt-get remove -y git \
 CMD ./console migrations:migrate --no-interaction && \
  ./console register-crontab --no-interaction && \
  exec /usr/sbin/php5-fpm -F
+
+WORKDIR /var/www/pinboard
