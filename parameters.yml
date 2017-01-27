@@ -1,8 +1,8 @@
 db:
     host: localhost
     name: pinba
-    user: root
-    pass: root
+    user: pinba
+    pass: pinboardPassword
 base_url: /
 logging:
     long_request_time:
